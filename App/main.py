@@ -44,8 +44,11 @@ class KampyApp(MDApp):
         
 
     def check_kampy_permission(self):
-        if check_permission("android.permission.WRITE_EXTERNAL_STORAGE") and check_permission("android.permission.CAMERA"):
-            pass
+        if check_permission("android.permission.WRITE_EXTERNAL_STORAGE"):
+            if check_permission("android.permission.CAMERA"):
+                pass
+            else:
+                request_kampy_permission()
         else:
             request_kampy_permission()
             
@@ -78,7 +81,7 @@ class KampyApp(MDApp):
         return False
         
     def build(self):
-        check_kampy_permission()
+        self.check_kampy_permission()
         self.theme_cls.primary_palette = "Blue"
         self.theme_cls.primary_hue = "900"
         self.theme_cls.accent_palette = "Red"
