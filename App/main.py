@@ -13,7 +13,7 @@ import android.activity
 import android
 from plyer.platforms.android import activity
 
-Window.size = (300,500)
+#Window.size = (300,500)
 
 KV = """
 Screen:
