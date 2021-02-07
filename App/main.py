@@ -12,7 +12,7 @@ from permissions.access import check_permission, ask_permission
 import android.activity
 import android
 from plyer.platforms.android import activity
-
+import datetime
 #Window.size = (300,500)
 
 KV = """
@@ -76,11 +76,9 @@ class KampyApp(MDApp):
             Logger.error(str(e))
             self.error = str(e)
         return False
-    
-    def __init__(self):
-        check_kampy_permission()
         
     def build(self):
+        check_kampy_permission()
         self.theme_cls.primary_palette = "Blue"
         self.theme_cls.primary_hue = "900"
         self.theme_cls.accent_palette = "Red"
