@@ -8,7 +8,7 @@ from kivy.core.window import Window
 import os
 from plyer import camera, storagepath
 from jnius import autoclass, cast
-from permissions.access import check_permission, ask_permission 
+from permissions.access import check_permission, ask_permission    
 import android.activity
 import android
 from plyer.platforms.android import activity
